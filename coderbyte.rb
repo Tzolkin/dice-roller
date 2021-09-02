@@ -1,4 +1,4 @@
-response = { name: { first_name: 'Jonh', mid_name: '', last_name: 'Smith' }, age: '45', smoker: 'N/A', college: { grade: '', university: 'Yale', nested: { key: '' }  }, hobbies: ['games', 'read', '-'] }
+response = { name: { first_name: 'Jonh', mid_name: '', last_name: 'Smith' }, age: '45', smoker: 'N/A', college: { grade: '', university: 'Yale'  }, hobbies: ['games', 'read', '-'] }
 
 def filter!(response)
   response.reject! { |key, value| ['N/A', '-', ''].include?(value) if value.is_a?(String) }
